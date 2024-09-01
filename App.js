@@ -1,20 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, Text, View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import tw from 'twrnc';
+import CardComponent from './components/CardComponent';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <SafeAreaProvider>
+    <SafeAreaView style={tw`mt-5 pt-3 mb-40`}>
+    <View style={tw`bg-blue-300 `}>
+      <Text style={tw`m-2 p-2 ml-4 text-3xl bg-blue-400`}>Store</Text>
+      <CardComponent/>
     </View>
+    </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
