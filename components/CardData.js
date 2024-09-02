@@ -1,4 +1,4 @@
-import { View, Text, Image, Button } from 'react-native';
+import { View, Text, Image, Button, TouchableOpacity } from 'react-native';
 import React from 'react';
 import tw from 'twrnc';
 
@@ -25,7 +25,8 @@ const CardData = ({ values,onPress }) => {
       />
       <Text>{getFilteredNames()}</Text>
       </View>
-      <Button style={tw`w-2 h-2`} title='press me' onPress={onPress}></Button>
+      <TouchableOpacity style={tw`bg-blue-500 p-2 w-30 h-10 rounded-lg items-center justify-center`} onPress={onPress}><Text style={tw`text-white`}  >click me</Text></TouchableOpacity>
+      
     </View>
   );
 };
