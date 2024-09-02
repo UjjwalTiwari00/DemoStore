@@ -4,7 +4,9 @@ import React from 'react'
 const Cart = () => {
   return (
     <View>
-      <Text>Cart</Text>
+      <Text>
+        this is card ......
+      </Text>
     </View>
   )
 }
