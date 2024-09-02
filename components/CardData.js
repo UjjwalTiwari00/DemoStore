@@ -2,7 +2,7 @@ import { View, Text, Image, Button } from 'react-native';
 import React from 'react';
 import tw from 'twrnc';
 
-const CardData = ({ values }) => {
+const CardData = ({ values,onPress }) => {
     const title=values.title
   
   function getFilteredNames() {
@@ -25,7 +25,7 @@ const CardData = ({ values }) => {
       />
       <Text>{getFilteredNames()}</Text>
       </View>
-      <Button style={tw`w-2 h-2`} title='press me'></Button>
+      <Button style={tw`w-2 h-2`} title='press me' onPress={onPress}></Button>
     </View>
   );
 };
